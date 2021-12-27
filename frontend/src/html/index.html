@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" class="h-100">
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <meta name="description" content=""/>
+        <title>Coolest Chatroom on the Internet</title>
+        <!-- Bootstrap core CSS -->
+        <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
+        <!-- Custom styles for this template -->
+        <link href="src/css/index.css" rel="stylesheet"/>
+    </head>
+    <body class="d-flex flex-column h-100" onload="onload()">
+        <audio id="Ding" src="Ding.mp3"></audio>
+        <header>
+            <!-- Fixed navbar -->
+            <nav class="navbar navbar-dark fixed-top bg-dark custom-border-0">
+                <div class="container-fluid"><a class="navbar-brand">Welcome to <span style="color:#ffd7ba">Mufaro</span>'s Chat Server!</a>
+                </div>
+            </nav>
+        </header>
+        <!-- Begin page content -->
+        <main>
+            <div class="container">
+              <!--
+                          Chatroom
+                          <h2 id="RoomID">Not connected to any room.</h2>
+                          <div id="Chat"></div>
+                      -->
+              <div class="row">
+                <div class="col-md-4" id="left-panel">
+                  <div class="row" id="left-panel-top-row">
+                    <p id="room-info">Currently connected to room [room]</p>
+                  </div>
+                  <div class="row" id="left-panel-bottom-row">
+                    <div id="Chat"></div>
+                  </div>
+                </div>
+                <div class="col-md-4" id="right-panel">
+                  <p>Column B</p>
+                </div>
+              </div>
+            </div>
+        </main>
+        <!-- Fixed Footer for Message Input -->
+        <footer class="footer mt-auto py-3 bg-dark" id="bottomFooter">
+            <div class="container">
+                <form> 
+                    <div class="input-group mb-3"> 
+                        <input class="input-group-text" id="basic-addon1" type="button" value="Send" onclick="Send()"></input> 
+                        <input type="text" class="form-control" placeholder="Message [channel] as [username]" aria-label="Username" aria-describedby="basic-addon1"/> 
+                    </div>
+                </form>
+                <!--
+                    <label id="MessageLabel" class="text-muted">Message:</label>                     
+                    <input id="ComposedMessage" type="text" class="inputbox"/> 
+                    <input id="SendMessage" onclick="Send()" value="Send" class="inputbox" type="button"/> 
+                    <span class="text-muted">Place sticky footer content here.</span>
+                -->
+            </div>
+        </footer>
+        <script src="socket.io/socket.io.js"></script>
+        <script src="src/js/index.js"></script>
+        <script src="assets/js/popper.min.js"></script>
+        <script src="bootstrap/js/bootstrap.min.js"></script>
+    </body>
+</html>
