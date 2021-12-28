@@ -4,7 +4,7 @@ const config = {
             type: 'stdout', 
             layout: {
                 type: 'pattern',
-                pattern: '%[[%d{yyyy-MM-dd|hh:mm:ss}] [%p %X{context}]%] %m'
+                pattern: '%[[%d{yyyy-MM-dd hh:mm:ss}] [%p %X{context}]%] %m'
             }
         },
         file: {
@@ -13,7 +13,7 @@ const config = {
             compress: true,
             layout: {
                 type: 'pattern',
-                pattern: '[%d] [%p %X{context}] %m'
+                pattern: '[%d{yyyy-MM-dd hh:mm:ss}] [%p %X{context}] %m'
             }
         }
     },

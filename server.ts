@@ -54,9 +54,8 @@ io.on('connection', function(socket: any){
       io.in(rooms[socket.id]).emit("recieve", `[${time()}] [${usernames[socket.id]}] ${message}`);
   
       if (usernames[socket.id] != null) {
-        roomLogger.addContext('username', usernames[socket.id]);
-        roomLogger.addContext('room', rooms[socket.id]);
-        roomLogger.info(message);
+        roomLogger.addContext('context', rooms[socket.id]);
+        roomLogger.info(`${usernames[socket.id]}: ${message}`);
       }
     });
   

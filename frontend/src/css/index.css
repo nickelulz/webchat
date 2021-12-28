@@ -9,7 +9,8 @@ main > .container {
 }
 
 main {
-    padding: 54px 0;
+    padding-top: 54px;
+    padding-bottom: 88px;
     width: 100%;
     margin: 0 auto;
 }
@@ -28,12 +29,16 @@ main {
     border-width: 1px;
 }
 
+#left-panel-top-row {
+    max-height: 10vh !important;
+    min-height: 10vh !important;
+}
+
 .row {
     /* margin-top: 60px; */
     margin-bottom: 1px;
     margin-top: 1px;
-    max-height: auto;
-    min-height: auto;
+    min-height: 60vh !important;
 }
 
 .row > .col-md-4 > p {
@@ -51,12 +56,10 @@ main {
 }
 
 #left-panel {
-    max-width: none;
-    width: 80%;
     margin-right: 1px;
+    padding: 20px;
 }
 
 #right-panel {
-    width: 19.8%;
     margin-left: 1px;
 }
